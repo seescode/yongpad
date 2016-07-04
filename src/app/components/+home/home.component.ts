@@ -9,9 +9,9 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-    public pathImage:string;
 
-    constructor(){
-        this.pathImage="../../../../assets/home/picture.png";
-    }
+  notes: string[] = ['abc', 'def', 'ghi'];
+
+  constructor() {
+  }
 }
