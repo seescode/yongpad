@@ -1,17 +1,21 @@
 import {Component} from "@angular/core";
 import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
+import {TasksService} from '../../shared/services/src/tasks.service'
 
 @Component({
     selector: 'home',
     moduleId: module.id,
     directives: [ROUTER_DIRECTIVES],    
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css']
+    styleUrls: ['./home.component.css'],
+    providers: [TasksService]
 })
 export class HomeComponent {
+  notes: string[]
 
-  notes: string[] = ['abc', 'def', 'ghi'];
-
-  constructor() {
+  constructor(tasksSvc: TasksService) {
+    this.notes = tasksSvc.get();    
   }
+
+  
 }
