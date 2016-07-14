@@ -1,7 +1,7 @@
 <h1>Notes</h1>
 
-<div *ngFor="let note of notes">
-    <span>{{note}}</span><button>Edit</button>
+<div *ngFor="let note of notes; let i = index">
+    <span>{{note}}</span><button (click)="delete(i)">Delete</button>
 </div>
 
 <button [routerLink]="['Edit']">Add New</button>
