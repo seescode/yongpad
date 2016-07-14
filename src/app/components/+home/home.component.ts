@@ -7,8 +7,7 @@ import {TasksService} from '../../shared/services/src/tasks.service'
     moduleId: module.id,
     directives: [ROUTER_DIRECTIVES],    
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css'],
-    providers: [TasksService]
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
   notes: string[]
@@ -17,5 +16,5 @@ export class HomeComponent {
     this.notes = tasksSvc.get();    
   }
 
-  
+
 }

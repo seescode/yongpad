@@ -11,8 +11,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from '@angular/router-deprecated';
     templateUrl: './edit.component.html',
     styleUrls: ['./edit.component.css'],
     providers: [
-        CharacterCheckService,
-        TasksService
+        CharacterCheckService
     ]
 })
 export class EditComponent {
